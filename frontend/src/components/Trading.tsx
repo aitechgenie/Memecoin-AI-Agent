@@ -68,9 +68,9 @@ const DEFAULT_TOKENS: Token[] = [
   },
   {
     address: '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump',
-    symbol: 'JENNA',
+    symbol: 'ELONA',
     decimals: 9,
-    logoURI: '/jenna-logo.png'
+    logoURI: '/ELONA-logo.png'
   }
 ];
 

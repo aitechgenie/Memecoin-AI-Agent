@@ -114,7 +114,7 @@ export const CONFIG = {
       MODEL: 'mixtral-8x7b-32768',
       MAX_TOKENS: 4096,
       DEFAULT_TEMPERATURE: 0.7,
-      THREAD_ID: 'jenna_v1', // Add THREAD_ID property
+      THREAD_ID: 'ELONA_v1', // Add THREAD_ID property
       SYSTEM_PROMPTS: {
         MARKET_ANALYSIS: 'Analyze the following market data and provide insights:',
         TRADE_DECISION: 'Based on the market analysis, recommend trading actions:',

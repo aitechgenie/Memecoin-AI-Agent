@@ -14,11 +14,11 @@ const COMMON_TOKENS = {
     symbol: 'SOL',
     name: 'Solana',
   },
-  'JENNA': {
+  'ELONA': {
     address: '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump',
     decimals: 9,
-    symbol: 'JENNA',
-    name: 'JENNA Token',
+    symbol: 'ELONA',
+    name: 'ELONA Token',
   }
 } as const;
 

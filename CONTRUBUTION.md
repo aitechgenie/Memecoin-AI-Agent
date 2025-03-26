@@ -1,7 +1,7 @@
-# JENNA - Open Source Contribution Guide
+# ELONA - Open Source Contribution Guide
 
-## About JENNA
-JENNA (Social Onchain Intelligence Agent) is an advanced AI system built for the Solana ecosystem, combining social intelligence with decentralized trading capabilities. We welcome community contributions to help improve and evolve the project.
+## About ELONA
+ELONA (Social Onchain Intelligence Agent) is an advanced AI system built for the Solana ecosystem, combining social intelligence with decentralized trading capabilities. We welcome community contributions to help improve and evolve the project.
 # 🌟 Project Overview
 - AI Engine: Social intelligence and trading analysis
 - Trading System: Jupiter Protocol integration
@@ -122,7 +122,7 @@ JENNA (Social Onchain Intelligence Agent) is an advanced AI system built for the
 ## 📞 Get Help & Support
 - Check GitHub Issues for existing problems
 - Use GitHub Discussions for questions
-- Follow @jennamagent on Twitter for updates
+- Follow @ELONAmagent on Twitter for updates
 
 ## 👥 Recognition
 All contributors will be recognized in:
@@ -131,4 +131,4 @@ All contributors will be recognized in:
 - Release notes
 - Community spotlights on Twitter
 
-We appreciate all contributions, big and small, that help make JENNA better!
+We appreciate all contributions, big and small, that help make ELONA better!

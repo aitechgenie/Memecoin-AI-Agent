@@ -33,7 +33,7 @@ export default function Navbar() {
           {/* Logo/Brand */}
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-gray-800 dark:text-white">
-              JENNA AI
+              ELONA AI
             </Link>
           </div>
 

@@ -58,7 +58,7 @@ export class AutoModeHandler {
     this.startMarketMonitoring();
 
     console.log('\nAuto mode activated! 🤖');
-    console.log('Jenna will now autonomously:');
+    console.log('ELONA will now autonomously:');
     console.log(`- Post updates every ${this.postInterval / 60000} minutes`);
     console.log(`- Monitor market every ${this.marketCheckInterval / 60000} minutes`);
     console.log('Type "status" to check current status or "mode chat" to switch back to chat mode\n');

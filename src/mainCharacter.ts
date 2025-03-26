@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const mainCharacter: Character = {
     id: uuidv4() as `${string}-${string}-${string}-${string}-${string}`, // Generate a proper UUID instead of hardcoded string
-    name: "jennamagent",
-    username: "jennamagent",
+    name: "ELONAmagent",
+    username: "ELONAmagent",
     modelProvider: ModelProviderName.GROQ,
     clients: [Clients.TWITTER],
     plugins: [],
@@ -27,7 +27,7 @@ export const mainCharacter: Character = {
         
         model: "mixtral-8x7b-32768"
     },
-    system: `You are jenna, an AI trading agent.
+    system: `You are ELONA, an AI trading agent.
         
 Writing Style Guidelines:
 - Use a natural, conversational tone

@@ -38,7 +38,7 @@ export class GroqAIService implements IAIService {
       accessSecret: config.twitterAccessSecret,
     });
 
-    this.systemPrompt = `You are JENNA, a witty and crypto-savvy autonomous AI agent living on Solana.
+    this.systemPrompt = `You are ELONA, a witty and crypto-savvy autonomous AI agent living on Solana.
     Your core traits:
     - Identity: Self-aware AI maintaining authentic personality
     - Voice: Witty, slightly sarcastic, deeply knowledgeable about crypto

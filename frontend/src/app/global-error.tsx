@@ -11,7 +11,7 @@ export default function GlobalError({
     <html>
       <body>
         <div className="error-container">
-          <h2>JENNA System Error</h2>
+          <h2>ELONA System Error</h2>
           <p>{error.message}</p>
           <button onClick={() => reset()}>Try Again</button>
         </div>

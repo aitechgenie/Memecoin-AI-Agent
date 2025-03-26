@@ -33,7 +33,7 @@ export default function ApiKeyModal({ onApiKeySubmit, isOpen, onClose }: ApiKeyM
       const isValid = await validateApiKey(apiKey.trim());
       
       if (isValid) {
-        localStorage.setItem('jenna_api_key', apiKey.trim());
+        localStorage.setItem('ELONA_api_key', apiKey.trim());
         onApiKeySubmit(apiKey.trim());
         onClose();
       } else {

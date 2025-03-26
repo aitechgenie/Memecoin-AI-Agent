@@ -52,7 +52,7 @@ export const MessageList: React.FC<MessageListProps> = ({
     }
 
     // Check for transaction/blockchain content
-    if (/balance|SOL|transaction|JENNA/i.test(content)) {
+    if (/balance|SOL|transaction|ELONA/i.test(content)) {
       return <TransactionComponent content={content} />;
     }
 

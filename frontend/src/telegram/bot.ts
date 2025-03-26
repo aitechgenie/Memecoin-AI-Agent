@@ -74,7 +74,7 @@ bot.onText(/\/start/, async (msg) => {
   const username = msg.from?.username || msg.from?.first_name || 'there';
   
   const welcomeMessage = `Welcome ${username}! 👋\n\n` +
-    `I'm JENNA, your Solana trading assistant. I can help you with:\n` +
+    `I'm ELONA, your Solana trading assistant. I can help you with:\n` +
     `• Market analysis\n` +
     `• Price checking\n` +
     `• Wallet tracking\n` +
@@ -90,7 +90,7 @@ bot.onText(/\/help/, async (msg) => {
   const chatId = msg.chat.id;
   
   const helpMessage = `Available Commands:\n\n` +
-    `/start - Start interaction with JENNA\n` +
+    `/start - Start interaction with ELONA\n` +
     `/help - Show this help message\n` +
     `/clear - Clear conversation history\n` +
     `/price - Get Solana price\n` +

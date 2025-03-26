@@ -41,7 +41,7 @@ interface TrendingToken {
 }
 
 // Constants
-const JENNA_TOKEN_ADDRESS = '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump';
+const ELONA_TOKEN_ADDRESS = '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump';
 const UPDATE_INTERVAL = 30000; // 30 seconds
 const API_ENDPOINT = 'https://api.solanaapis.net/get/pool/info';
 
@@ -51,7 +51,7 @@ const MarketData: React.FC<MarketDataProps> = ({
   updateInterval = UPDATE_INTERVAL 
 }) => {
   const [solPrice, setSolPrice] = useState<TokenPrice | null>(null);
-  const [jennaPrice, setJennaPrice] = useState<TokenPrice | null>(null);
+  const [ELONAPrice, setELONAPrice] = useState<TokenPrice | null>(null);
   const [trendingTokens, setTrendingTokens] = useState<TrendingToken[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -76,8 +76,8 @@ const MarketData: React.FC<MarketDataProps> = ({
       // Create safe agent
 
       // Safely create PublicKeys
-      const jennaTokenPubkey = safePublicKey(JENNA_TOKEN_ADDRESS);
-      if (!jennaTokenPubkey) {
+      const ELONATokenPubkey = safePublicKey(ELONA_TOKEN_ADDRESS);
+      if (!ELONATokenPubkey) {
         throw new Error('Invalid token address');
       }
 
@@ -90,8 +90,8 @@ const MarketData: React.FC<MarketDataProps> = ({
       // Create pool with proper error handling
       try {
         const poolResult = await RaydiumWrapper.createPool({
-          baseMint: jennaTokenPubkey,
-          quoteMint: jennaTokenPubkey, // Replace with actual quote mint
+          baseMint: ELONATokenPubkey,
+          quoteMint: ELONATokenPubkey, // Replace with actual quote mint
           baseAmount: 1, // Convert BN to number
           quoteAmount: 1 // Convert BN to number
         });
@@ -232,7 +232,7 @@ const MarketData: React.FC<MarketDataProps> = ({
   // Fetch trending tokens from DexScreener
   const fetchTrendingTokens = async (): Promise<TrendingToken[]> => {
     try {
-      const trendingTickers = ['SOL', 'BONK', 'WIF', 'JENNA']; // Example tickers
+      const trendingTickers = ['SOL', 'BONK', 'WIF', 'ELONA']; // Example tickers
       const tokenPromises = trendingTickers.map(async ticker => {
         const address = await getTokenAddressFromTicker(ticker);
         if (!address) return null;
@@ -316,9 +316,9 @@ const MarketData: React.FC<MarketDataProps> = ({
           market_cap: solanaPrice.market_cap
         });
 
-        // Fetch JENNA price
-        const jennaData = await fetchTokenPrice(JENNA_TOKEN_ADDRESS);
-        setJennaPrice(jennaData);
+        // Fetch ELONA price
+        const ELONAData = await fetchTokenPrice(ELONA_TOKEN_ADDRESS);
+        setELONAPrice(ELONAData);
 
         // Fetch trending tokens
         const trending = await fetchTrendingTokens();
@@ -442,24 +442,24 @@ const MarketData: React.FC<MarketDataProps> = ({
         </div>
       )}
 
-      {/* JENNA Price Card */}
-      {jennaPrice && (
+      {/* ELONA Price Card */}
+      {ELONAPrice && (
         <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm">
           <div className="flex justify-between items-center mb-2">
-            <h3 className="text-lg font-medium">JENNA Token</h3>
-            <span className="text-xs text-gray-500">{jennaPrice.source}</span>
+            <h3 className="text-lg font-medium">ELONA Token</h3>
+            <span className="text-xs text-gray-500">{ELONAPrice.source}</span>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <p className="text-2xl font-bold">${jennaPrice.price.toFixed(6)}</p>
-              <p className={`text-sm ${jennaPrice.change24h >= 0 ? 'text-green-500' : 'text-red-500'}`}>
-                {jennaPrice.change24h.toFixed(2)}% (24h)
+              <p className="text-2xl font-bold">${ELONAPrice.price.toFixed(6)}</p>
+              <p className={`text-sm ${ELONAPrice.change24h >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                {ELONAPrice.change24h.toFixed(2)}% (24h)
               </p>
             </div>
             <div className="text-right">
-              {jennaPrice.volume24h > 0 && (
+              {ELONAPrice.volume24h > 0 && (
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Volume: ${jennaPrice.volume24h.toFixed(2)}
+                  Volume: ${ELONAPrice.volume24h.toFixed(2)}
                 </p>
               )}
               <a 

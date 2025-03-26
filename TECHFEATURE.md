@@ -43,7 +43,7 @@ meme-agent/
 │   │   └── error/              # Error Handling
 │   └── utils/                  # Utility Functions
 ├── characters/                  # Character Configurations
-│   └── jenna.character.json    # Jenna Character Definition
+│   └── ELONA.character.json    # ELONA Character Definition
 ├── tests/                      # Test Suites
 │   ├── unit/                  # Unit Tests
 │   │   └── services/
@@ -70,7 +70,7 @@ meme-agent/
 3. **Character System Integration**
    - `src/personality/types.ts`: Character schema definitions
    - `src/personality/loadCharacter.ts`: Character loading logic
-   - `characters/jenna.character.json`: Character configuration
+   - `characters/ELONA.character.json`: Character configuration
 
 4. **Market Data Integration**
    - `src/services/analysis/market-analysis.ts`: Market data processing

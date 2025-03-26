@@ -173,7 +173,7 @@ class MemeAgentInfluencer {
     }
     async initialize() {
         try {
-            console.log('Initializing JENNA...');
+            console.log('Initializing ELONA...');
             // 1. Initialize LLM 
             await this.initializeLLM();
             // 2. Initialize Twitter
@@ -185,10 +185,10 @@ class MemeAgentInfluencer {
             // 5. Start automation
             await this.startAutomation();
             this.isInitialized = true;
-            console.log('JENNA initialization complete');
+            console.log('ELONA initialization complete');
         }
         catch (error) {
-            console.error('Failed to initialize JENNA:', error);
+            console.error('Failed to initialize ELONA:', error);
             await this.cleanup();
             throw error;
         }
@@ -1072,7 +1072,7 @@ async function startAutonomousMode(services) {
 // Main execution functions
 async function main() {
     try {
-        elizaLogger.info('JENNA starting up...');
+        elizaLogger.info('ELONA starting up...');
         // Initialize all services
         validateEnvironment();
         logConfiguration();
@@ -1089,7 +1089,7 @@ async function main() {
         setupCleanupHandlers(services);
         function setupCleanupHandlers(services) {
             const handleShutdown = async () => {
-                elizaLogger.info('Shutting down JENNA...');
+                elizaLogger.info('Shutting down ELONA...');
                 await cleanup(services);
                 process.exit(0);
             };
@@ -1160,7 +1160,7 @@ async function main() {
 }
 function setupCleanupHandlers(services) {
     const handleShutdown = async () => {
-        elizaLogger.info('Shutting down JENNA...');
+        elizaLogger.info('Shutting down ELONA...');
         await cleanup(services);
         process.exit(0);
     };

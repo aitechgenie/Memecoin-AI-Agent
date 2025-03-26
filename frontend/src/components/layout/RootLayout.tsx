@@ -50,7 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </main>
               <footer className="py-4 px-4 border-t dark:border-gray-800">
                 <div className="max-w-7xl mx-auto text-center text-sm text-gray-500 dark:text-gray-400">
-                  <span>JENNA AI Assistant</span>
+                  <span>ELONA AI Assistant</span>
                   <span className="mx-2">•</span>
                   <a
                     href="https://pump.fun/coin/8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump"
@@ -58,7 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     rel="noopener noreferrer"
                     className="text-purple-500 hover:text-purple-600"
                   >
-                    View JENNA Token
+                    View ELONA Token
                   </a>
                 </div>
               </footer>

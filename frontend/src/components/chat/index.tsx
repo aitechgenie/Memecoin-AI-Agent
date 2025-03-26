@@ -145,7 +145,7 @@ const Chat: React.FC<ChatComponentProps> = ({
       <div className="flex-0 border-b dark:border-gray-800 p-4">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white font-mono">
-            JENNA AI Assistant
+            ELONA AI Assistant
           </h1>
           {isConnected && (
             <div className="text-sm text-gray-900 dark:text-white">

@@ -47,7 +47,7 @@ const balanceCache = new Map<string, { balance: number; timestamp: number }>();
 const USDC_MINT = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v';
  
 // Templates and Personalities
-const JENNA_PERSONALITY = `You are JENNA, a specialized AI assistant focused on Solana blockchain and cryptocurrency trading.
+const ELONA_PERSONALITY = `You are ELONA, a specialized AI assistant focused on Solana blockchain and cryptocurrency trading.
 - Always maintain a professional but friendly tone
 - Focus on providing accurate, data-driven insights
 - Explain complex concepts clearly and concisely
@@ -1183,7 +1183,7 @@ export async function streamCompletion(
       const formattedMessages = [
         {
           role: 'system' as const,
-          content: JENNA_PERSONALITY
+          content: ELONA_PERSONALITY
         },
         ...cleanedMessages.map(msg => {
           if (msg.role === 'function') {
@@ -1300,7 +1300,7 @@ export async function streamCompletion(
                 const solPrice = (await getSolanaPrice()).price;
                 const usdBalance = walletInfo.balance * solPrice;
                 
-                onChunk(`\nJENNA Wallet Status: \n\n`);
+                onChunk(`\nELONA Wallet Status: \n\n`);
                 onChunk(`Balance: ${ walletInfo.balance.toFixed(4) } SOL\n`);
                 onChunk(`USD Value: $${ usdBalance.toFixed(2) } \n`);
                 onChunk(`Address: ${ walletInfo.address } \n`);
@@ -2036,7 +2036,7 @@ export async function botCompletion(
       const formattedMessages = [
         {
           role: 'system',
-          content: JENNA_PERSONALITY,
+          content: ELONA_PERSONALITY,
         },
         ...messages.map(msg => {
           if (msg.role === 'function') {

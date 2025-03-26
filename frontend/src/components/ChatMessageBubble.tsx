@@ -44,7 +44,7 @@ export function ChatMessageBubble({ message, aiEmoji = "🤖", sources = [] }: C
       >
         {message.role === "assistant" && (
           <div className="mb-1 text-sm opacity-50">
-            {aiEmoji} JENNA AI
+            {aiEmoji} ELONA AI
           </div>
         )}
         

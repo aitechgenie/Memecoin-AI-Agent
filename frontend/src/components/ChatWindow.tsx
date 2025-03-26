@@ -23,8 +23,8 @@ interface ChatWindowProps {
 export function ChatWindow({
   endpoint,
   emptyStateComponent,
-  placeholder = "Ask Jenna about Solana...",
-  titleText = "JENNA AI",
+  placeholder = "Ask ELONA about Solana...",
+  titleText = "ELONA AI",
   emoji = "🤖",
   showIntermediateStepsToggle = true,
   walletAddress,

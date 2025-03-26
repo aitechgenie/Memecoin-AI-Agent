@@ -16,8 +16,8 @@ export const EXAMPLE_PROMPTS: ExamplePrompt[] = [
     icon: IconBolt
   },
   {
-    title: "View JENNA Token",
-    prompt: "Show me info about the JENNA token",
+    title: "View ELONA Token",
+    prompt: "Show me info about the ELONA token",
     icon: IconCoin
   },
   {

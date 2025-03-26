@@ -16,7 +16,7 @@ const JUPITER_API = {
 const TOKENS = {
   USDC: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
   SOL: 'So11111111111111111111111111111111111111112',
-  JENNA: '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump'
+  ELONA: '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump'
 } as const;
 
 // Types
@@ -120,7 +120,7 @@ export async function getSwapQuote(
 ): Promise<SwapQuote | null> {
   try {
     // Adjust slippage based on token
-    const slippageBps = outputMint === TOKENS.JENNA ? 1000 : 50;
+    const slippageBps = outputMint === TOKENS.ELONA ? 1000 : 50;
     const inputAmount = (amountInSol * LAMPORTS_PER_SOL).toString();
     
     // Prepare query parameters
@@ -129,7 +129,7 @@ export async function getSwapQuote(
       outputMint,
       amount: inputAmount,
       slippageBps: slippageBps.toString(),
-      onlyDirectRoutes: (outputMint === TOKENS.JENNA).toString(),
+      onlyDirectRoutes: (outputMint === TOKENS.ELONA).toString(),
       asLegacyTransaction: 'false'
     });
 
@@ -216,7 +216,7 @@ export async function swapSolToToken(
  */
 function validateSwapAmount(amount: number, outputMint: string): boolean {
   if (amount <= 0) return false;
-  if (outputMint === TOKENS.JENNA && amount < 0.01) return false;
+  if (outputMint === TOKENS.ELONA && amount < 0.01) return false;
   if (amount > 1000) return false; // Max swap amount
   return true;
 }
@@ -228,7 +228,7 @@ function getTokenDecimals(mint: string): number {
   switch (mint) {
     case TOKENS.USDC:
       return 6;
-    case TOKENS.JENNA:
+    case TOKENS.ELONA:
     case TOKENS.SOL:
       return 9;
     default:
@@ -258,8 +258,8 @@ function getTokenSymbol(mint: string): string {
   switch (mint) {
     case TOKENS.USDC:
       return 'USDC';
-    case TOKENS.JENNA:
-      return 'JENNA';
+    case TOKENS.ELONA:
+      return 'ELONA';
     case TOKENS.SOL:
       return 'SOL';
     default:

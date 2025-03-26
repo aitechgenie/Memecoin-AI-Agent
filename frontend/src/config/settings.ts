@@ -53,8 +53,8 @@ export const CONFIG: Config = {
     RPC_URL: SOLANA_CONFIG.RPC_URL,
     PUBLIC_KEY: SOLANA_CONFIG.PUBLIC_KEY || '',
     TOKEN_SETTINGS: {
-      NAME: 'JENNA',
-      SYMBOL: 'JENNA',
+      NAME: 'ELONA',
+      SYMBOL: 'ELONA',
       DECIMALS: 9,
       SUPPLY: 100000000,
       ADDRESS: '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump'

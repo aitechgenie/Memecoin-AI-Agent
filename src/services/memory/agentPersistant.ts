@@ -41,7 +41,7 @@ export class PersistentAgent {
     this.aiService = aiService;
     this.config = {
       configurable: {
-        thread_id: "JENNA_v1"
+        thread_id: "ELONA_v1"
       }
     };
   }
@@ -142,7 +142,7 @@ export class PersistentAgent {
 
         const message = response.choices[0]?.message?.content;
         if (message) {
-          console.log('\nJENNA:', message);
+          console.log('\nELONA:', message);
         }
 
       } catch (error) {

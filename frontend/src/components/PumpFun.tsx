@@ -31,7 +31,7 @@ export default function PumpFun({ walletAddress, onTransaction, onError }: PumpF
   const [error, setError] = useState<string | null>(null);
   const [userBalance, setUserBalance] = useState<number | null>(null);
 
-  const JENNA_TOKEN_ADDRESS = '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump';
+  const ELONA_TOKEN_ADDRESS = '8hVzPgFopqEQmNNoghr5WbPY1LEjW8GzgbLRwuwHpump';
 
   useEffect(() => {
     loadTokenData();
@@ -45,7 +45,7 @@ export default function PumpFun({ walletAddress, onTransaction, onError }: PumpF
     setError(null);
     try {
       // Load token metrics from PumpFun API
-      const response = await fetch(`https://pump.fun/api/token/${JENNA_TOKEN_ADDRESS}`);
+      const response = await fetch(`https://pump.fun/api/token/${ELONA_TOKEN_ADDRESS}`);
       if (!response.ok) throw new Error('Failed to fetch token data');
       
       const data = await response.json();
@@ -59,7 +59,7 @@ export default function PumpFun({ walletAddress, onTransaction, onError }: PumpF
 
       // Load chart data
       const chartResponse = await fetch(
-        `https://pump.fun/api/token/${JENNA_TOKEN_ADDRESS}/chart?period=24h`
+        `https://pump.fun/api/token/${ELONA_TOKEN_ADDRESS}/chart?period=24h`
       );
       if (!chartResponse.ok) throw new Error('Failed to fetch chart data');
       
@@ -76,7 +76,7 @@ export default function PumpFun({ walletAddress, onTransaction, onError }: PumpF
   const loadUserBalance = async () => {
     try {
       const publicKey = new PublicKey(walletAddress!);
-      const tokenPublicKey = new PublicKey(JENNA_TOKEN_ADDRESS);
+      const tokenPublicKey = new PublicKey(ELONA_TOKEN_ADDRESS);
       
       // Get token account
       const response = await fetch(`/api/wallet/tokens?address=${walletAddress}`);
@@ -84,7 +84,7 @@ export default function PumpFun({ walletAddress, onTransaction, onError }: PumpF
       
       const data = await response.json();
       const balance = data.tokens.find(
-        (t: any) => t.mint === JENNA_TOKEN_ADDRESS
+        (t: any) => t.mint === ELONA_TOKEN_ADDRESS
       )?.amount || 0;
 
       setUserBalance(balance);
@@ -123,9 +123,9 @@ export default function PumpFun({ walletAddress, onTransaction, onError }: PumpF
         <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
           <div className="flex justify-between items-start mb-6">
             <div>
-              <h3 className="text-lg font-medium">JENNA Token</h3>
+              <h3 className="text-lg font-medium">ELONA Token</h3>
               <a
-                href={`https://pump.fun/token/${JENNA_TOKEN_ADDRESS}`}
+                href={`https://pump.fun/token/${ELONA_TOKEN_ADDRESS}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-purple-500 hover:text-purple-600"
@@ -136,7 +136,7 @@ export default function PumpFun({ walletAddress, onTransaction, onError }: PumpF
             {userBalance !== null && (
               <div className="text-right">
                 <p className="text-sm text-gray-600 dark:text-gray-400">Your Balance</p>
-                <p className="text-lg font-medium">{userBalance.toLocaleString()} JENNA</p>
+                <p className="text-lg font-medium">{userBalance.toLocaleString()} ELONA</p>
               </div>
             )}
           </div>
@@ -177,7 +177,7 @@ export default function PumpFun({ walletAddress, onTransaction, onError }: PumpF
       <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
         <h3 className="text-lg font-medium mb-4">Token Information</h3>
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          The JENNA token is a utility token used within the PumpFun ecosystem. It allows users to participate in various activities and earn rewards.
+          The ELONA token is a utility token used within the PumpFun ecosystem. It allows users to participate in various activities and earn rewards.
         </p>
       </div>
     </div>

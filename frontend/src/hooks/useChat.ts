@@ -117,7 +117,7 @@ export function useChat(options: UseChatOptions = {}) {
       });
 
       // Get API key
-      const apiKey = localStorage.getItem('jenna_api_key');
+      const apiKey = localStorage.getItem('ELONA_api_key');
       if (!apiKey) {
         throw new Error('API key not found');
       }
